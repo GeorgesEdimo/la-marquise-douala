@@ -1,398 +1,246 @@
-﻿# CAHIER DES CHARGES — THE YARD
-## Restaurant Bar Lounge & Traiteur — Douala, Cameroun
+# CAHIER DES CHARGES — LA MARQUISE RESTAURANT
+## Fast-Food & Fine Dining · Playing Area · Cocktail Bar — Douala, Cameroun
 
 ---
 
-## 📋 INFORMATIONS GÉNÉRALES
-
-**Nom du projet :** The Yard — Site Web Vitrine & Tableau de Bord  
-**Client :** The Yard Restaurant Bar Lounge  
-**Localisation :** 737 Rue Batibois, Quartier Bonapriso, Douala, Cameroun  
-**Date :** 2026  
-**Version :** 2.0  
+**Nom du projet :** La Marquise — Site Web Vitrine & Tableau de Bord
+**Client :** La Marquise Restaurant
+**Localisation :** Rue Tokoto, Bonapriso, Douala, Cameroun
+**Date :** 2026 — Version 2.0
 
 ---
 
-## 🎯 OBJECTIFS DU PROJET
+## 1. Objectifs du Projet
 
 ### Objectifs principaux
-- Créer un site web vitrine moderne et élégant pour The Yard
-- Développer un tableau de bord (dashboard) pour la gestion interne
-- Présenter l'univers du restaurant (jardin secret, cocktails signature, DJ Fest)
-- Permettre la réservation en ligne via lien téléphonique
-- Mettre en valeur la galerie photos/vidéos
-- Optimiser le référencement local (SEO)
-- Garantir une expérience utilisateur fluide sur tous les appareils
-- Offrir un backoffice pour gérer le menu, les réservations et la galerie
+
+1. Créer un site vitrine moderne et élégant, fidèle à l'identité visuelle charcoal & or de La Marquise
+2. Développer un dashboard de gestion interne pour les commandes, réservations et événements
+3. Présenter l'univers du restaurant : Fast-Food & Fine Dining, Playing Area, Cocktail Bar
+4. Permettre la réservation en ligne via formulaire intégré
+5. Permettre les commandes en ligne (sur place, à emporter, livraison)
+6. Valoriser la galerie photos/vidéos du restaurant
+7. Optimiser le référencement local (SEO Google)
+8. Expérience fluide sur tous appareils (responsive)
+9. Backoffice pour gestion du menu, réservations, galerie et événements
 
 ### Public cible
-- **Visiteurs du site :** Résidents de Douala, expatriés, voyageurs, clients corporate
-- **Utilisateurs du dashboard :** Équipe de The Yard (manager, chef, équipe marketing)
+
+- **Visiteurs :** Résidents de Douala, expatriés, voyageurs, clientèle corporate, familles
+- **Utilisateurs du dashboard :** Manager, chef, équipe marketing, propriétaire
 
 ---
 
-## 🛠️ TECHNOLOGIES CHOISIES
+## 2. Technologies
 
 ### Frontend
-| Technologie | Version | Usage |
-|-------------|---------|-------|
-| **React** | 18.x | Framework UI composants |
-| **TypeScript** | 5.x | Typage statique, robustesse du code |
-| **Tailwind CSS** | 3.x | Framework CSS utilitaire |
-| **Vite** | 5.x | Build tool & dev server |
-| **React Router** | 6.x | Navigation SPA |
-| **Google Fonts** | - | Cormorant Garamond, Inter, Outfit |
 
-### Backend (à venir)
 | Technologie | Version | Usage |
-|-------------|---------|-------|
-| **Python** | 3.12+ | Langage serveur |
-| **FastAPI** | 0.110+ | Framework API REST |
-| **SQLAlchemy** | 2.x | ORM base de données |
-| **PostgreSQL** | 16.x | Base de données relationnelle |
-| **Pydantic** | 2.x | Validation des données |
+|---|---|---|
+| React | 18.x | Framework UI |
+| TypeScript | 5.x | Typage statique |
+| Tailwind CSS | 3.x | Styling utility-first |
+| Vite | 5.x | Build tool + dev server |
+| React Router | 6.x | Routage SPA |
+
+### Backend
+
+| Technologie | Version | Usage |
+|---|---|---|
+| Python | 3.12+ | Langage backend |
+| FastAPI | 0.115+ | Framework API REST |
+| SQLAlchemy | 2.x | ORM |
+| PostgreSQL | 16.x | Base de données prod |
+| SQLite | — | Base de données dev |
+| Pydantic | 2.x | Validation des schémas |
 
 ### Assets & Médias
-- **Formats d'images :** WebP (optimisation), JPG (fallback), PNG (logo)
-- **Formats vidéo :** MP4 (H.264) avec fallback WebM
-- **Lazy loading :** Attribut natif loading="lazy" + Intersection Observer
-- **Responsive images :** srcset pour différentes densités d'écran
+
+- **Formats :** WebP (optimisation), JPG (fallback), PNG (logo), SVG (icônes)
+- **Lazy loading :** `loading="lazy"` + Intersection Observer
+- **Responsive :** srcset pour les images selon la taille d'écran
 
 ### Outils de développement
-- **ESLint** — Linting JavaScript/TypeScript
-- **Prettier** — Formatage du code
-- **Husky** — Git hooks
-- **Git** — Versioning
 
-### Performance & Optimisation
-- **Preconnect :** Google Fonts, CDN externes
-- **Compression :** Images optimisées (WebP)
-- **Cache :** Headers de cache navigateur
-- **Minification :** Vite + Terser
-- **CDN :** Google Fonts, Cloudflare
-- **Code splitting :** Vite (lazy loading des composants)
-
-### Accessibilité (WCAG 2.1)
-- Attributs ARIA (ole, ria-label, ria-modal)
-- Navigation au clavier
-- Focus visible (outline doré)
-- Textes alternatifs sur toutes les images
-- Contraste de couleurs conforme (ratio 4.5:1 minimum)
-- Sémantique HTML5 (<nav>, <section>, <article>, <figure>)
-
-### SEO (Référencement)
-- **Meta tags :** title, description, Open Graph, Twitter Cards
-- **Structured Data :** JSON-LD (Schema.org Restaurant)
-- **Sitemap XML :** À générer pour l'indexation
-- **Robots.txt :** Configuration de l'indexation
-- **URL canonique :** À définir pour éviter le duplicate content
+- ESLint + Prettier (formatage du code)
+- Git (versionning)
+- Docker Compose (conteneurisation)
 
 ---
 
-## 📐 ARCHITECTURE DU PROJET
-
-### Structure des dossiers
-`
-theyard/
-├── src/
-│   ├── components/          # Composants React
-│   │   ├── Navbar.tsx
-│   │   ├── Hero.tsx
-│   │   ├── About.tsx
-│   │   ├── Menu.tsx
-│   │   ├── CocktailsBanner.tsx
-│   │   ├── Gallery.tsx
-│   │   ├── HoursLocation.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Lightbox.tsx
-│   │   ├── FilterButton.tsx
-│   │   └── MenuCard.tsx
-│   ├── pages/               # Pages de l'application
-│   │   ├── HomePage.tsx     # Site public
-│   │   ├── Dashboard.tsx    # Tableau de bord admin
-│   │   └── Login.tsx        # Authentification admin
-│   ├── hooks/               # Custom hooks React
-│   │   ├── useCarousel.ts
-│   │   ├── useLightbox.ts
-│   │   ├── useFilters.ts
-│   │   └── useCounters.ts
-│   ├── types/               # Interfaces TypeScript
-│   │   ├── menu.ts
-│   │   ├── gallery.ts
-│   │   └── user.ts
-│   ├── data/                # Données statiques (avant backend)
-│   │   ├── menuItems.ts
-│   │   ├── galleryItems.ts
-│   │   └── hours.ts
-│   ├── styles/              # Styles CSS
-│   │   ├── index.css        # Tailwind directives
-│   │   └── animations.css   # Animations custom
-│   ├── App.tsx              # Composant racine
-│   └── main.tsx             # Point d'entrée
-├── public/                  # Assets statiques
-│   ├── images/
-│   ├── videos/
-│   └── favicon.ico
-├── maketetes/               # Maquettes et documentation
-│   ├── README.md
-│   ├── mockup-home.txt          # Wireframe texte - Accueil
-│   ├── mockup-gallery.txt       # Wireframe texte - Galerie
-│   ├── mockup-menu.txt          # Wireframe texte - Menu
-│   ├── mockup-homepartie1.png   # Maquette visuelle - Accueil (1/2)
-│   ├── mockup-homepartie2.png   # Maquette visuelle - Accueil (2/2)
-│   ├── mockup-dashboard.png     # Maquette visuelle - Tableau de bord
-│   ├── Dashboard.png            # Capture du dashboard existant
-│   └── logo-removebg-preview.png
-├── tailwind.config.js
-├── tsconfig.json
-├── vite.config.ts
-├── package.json
-└── CAHIER_DES_CHARGES.md
-`
-
----
-
-## 🎨 DESIGN SYSTEM
-
-### Palette de couleurs (Tailwind config)
-`javascript
-colors: {
-  primary: {
-    DEFAULT: '#1a3a2a',
-    light: '#2d5a3f',
-    dark: '#0d1f15',
-  },
-  accent: {
-    DEFAULT: '#c8a45a',
-    light: '#dfc07d',
-    dark: '#a07d3a',
-  },
-  gold: '#d4a843',
-}
-`
-
-### Typographie
-- **Titres :** Cormorant Garamond (serif élégant)
-- **Corps :** Inter (sans-serif moderne)
-- **Accent :** Outfit (géométrique, moderne)
-
-### Espacement & Bordures
-- **Container max-width :** 1280px
-- **Padding section :** py-20 md:py-32 (responsive)
-- **Border radius :** ounded-lg, ounded-xl, ounded-2xl
-
----
-
-## ⚡ FONCTIONNALITÉS
-
-### ✅ Site Public (React + TS + Tailwind)
-
-#### Page d'accueil
-- [x] Carrousel d'images hero (4 slides, transition 1.5s)
-- [x] Logo dans le hero
-- [x] Navigation fixe avec changement d'état au scroll
-- [x] Menu mobile (hamburger)
-- [x] Galerie avec filtres par catégorie
-- [x] Lightbox pour les images de la galerie
-- [x] Compteurs animés (statistiques cocktails)
-- [x] Lazy loading des images
-- [x] Structured Data JSON-LD
-- [x] Responsive design (mobile, tablette, desktop)
-
-#### Tableau de bord (Dashboard)
-- [ ] Authentification admin (login)
-- [ ] Vue d'ensemble avec KPIs (CA journalier, nb réservations, etc.)
-- [ ] Gestion du menu (CRUD plats)
-- [ ] Gestion de la galerie (upload photos/vidéos)
-- [ ] Gestion des horaires d'ouverture
-- [ ] Visualisation des réservations
-- [ ] Statistiques de fréquentation
-- [ ] Export de données (PDF, CSV)
-
-### 🔄 À venir (Backend Python FastAPI)
-- [ ] API REST pour le menu
-- [ ] API REST pour les réservations
-- [ ] API REST pour la galerie
-- [ ] API REST pour les statistiques
-- [ ] Système d'authentification JWT
-- [ ] Base de données PostgreSQL
-- [ ] Panel d'administration complet
-
----
-
-## 📚 MAQUETTES & DOCUMENTATION
-
-### 📄 Maquettes textuelles (Wireframes)
-Le projet dispose de **wireframes textuels détaillés** décrivant chaque section :
-
-| Fichier | Contenu |
-|---------|---------|
-| maketetes/mockup-home.txt | Wireframe complet de la page d'accueil (hero, à propos, menu, cocktails, galerie, horaires, contact, footer) |
-| maketetes/mockup-gallery.txt | Wireframe détaillé de la galerie (filtres, grille maçonnerie, lightbox, behind the scenes) |
-| maketetes/mockup-menu.txt | Wireframe détaillé de la section menu (filtres catégories, cartes plats, menu du jour, barre de réservation mobile) |
-
-### 🖼️ Maquettes visuelles (Mockups images)
-Le projet dispose de **captures visuelles** des maquettes :
-
-| Fichier | Contenu |
-|---------|---------|
-| maketetes/mockup-homepartie1.png | Maquette visuelle partie 1 — Accueil (hero + sections principales) |
-| maketetes/mockup-homepartie2.png | Maquette visuelle partie 2 — Sections détaillées + footer |
-| maketetes/mockup-dashboard.png | Maquette visuelle du tableau de bord admin |
-| maketetes/Dashboard.png | Capture du dashboard existant (référence design) |
-| maketetes/logo-removebg-preview.png | Logo The Yard sans fond (référence branding) |
-
-### 🎯 Utilisation des maquettes
-- **Wireframes texte** : Spécifications fonctionnelles (structure, contenu, interactions)
-- **Maquettes visuelles** : Références graphiques (couleurs, typographie, mise en page, ambiance)
-- **Dashboard** : Design de référence pour le backoffice admin
-
----
-
-## 📱 RESPONSIVE DESIGN
-
-### Breakpoints Tailwind
-`javascript
-screens: {
-  'sm': '640px',
-  'md': '768px',
-  'lg': '1024px',
-  'xl': '1280px',
-  '2xl': '1536px',
-}
-`
-
-### Adaptations mobiles
-- Menu hamburger (lg:hidden)
-- Grilles en colonne unique sur mobile
-- Boutons pleine largeur
-- Galerie en 1 colonne
-- Barre de réservation fixe en bas (mobile)
-
----
-
-## 🚀 DÉPLOIEMENT
-
-### Options d'hébergement Frontend (React)
-1. **Vercel** (recommandé) — Optimisé pour React/Vite
-2. **Netlify** — Simple et rapide
-3. **Cloudflare Pages** — Performance mondiale
-
-### Options d'hébergement Backend (Python)
-1. **Render** — Gratuit pour commencer
-2. **Railway** — Simple déploiement
-3. **Fly.io** — Performance globale
-
-### Domaine
-- Domaine personnalisé recommandé : 	heyard-douala.com
-- Sous-domaine dashboard : dmin.theyard-douala.com
-
----
-
-## 📊 MÉTRIQUES DE SUCCÈS
+## 3. Performance & SEO
 
 ### Performance
-- **Lighthouse Score :** > 90 (Performance, Accessibility, SEO)
-- **First Contentful Paint :** < 1.5s
-- **Largest Contentful Paint :** < 2.5s
-- **Time to Interactive :** < 3s
+
+- Preconnect Google Fonts / CDN
+- Compression WebP pour toutes les images
+- Headers cache navigateur (Vercel + Nginx)
+- Minification Vite + Terser
+- Code splitting automatique
+- 100+ utilisateurs simultanés testés sans erreur
 
 ### SEO
-- Indexation de toutes les pages
-- Apparition dans les résultats locaux (Google Maps)
-- Rich snippets (étoiles, horaires, menu)
 
-### Accessibilité
-- Conformité WCAG 2.1 niveau AA
-- Navigation clavier complète
-- Lecteur d'écran compatible
+- Meta tags (title, description, Open Graph, Twitter Cards)
+- JSON-LD Schema.org (type Restaurant)
+- Sitemap XML + robots.txt
+- Conformité WCAG 2.1
 
 ---
 
-## 📅 PLANNING
+## 4. Architecture du Projet
 
-### Phase 1 — Setup & MVP Site Public (✅ En cours)
-- Initialisation projet React + TS + Tailwind + Vite
-- Configuration ESLint, Prettier
-- Structure des composants
-- Migration du HTML/CSS existant vers React
-
-### Phase 2 — Site Public Complet (🔄 À faire)
-- Toutes les sections (Hero, About, Menu, Galerie, Contact)
-- Animations et interactions
-- Optimisations performance
-- Tests responsive
-
-### Phase 3 — Dashboard Admin (📋 Planifié)
-- Authentification
-- Interface de gestion
-- Visualisation des données
-- Connexion API backend
-
-### Phase 4 — Backend Python (📋 Planifié)
-- API REST avec FastAPI
-- Base de données PostgreSQL
-- Authentification JWT
-- Déploiement
-
-### Phase 5 — Déploiement Final
-- Build production
-- Tests E2E
-- Mise en ligne
-- Monitoring
+```
+LaMarquise/
+├── src/
+│   ├── components/     # React (Navbar, Hero, Menu, Galerie...)
+│   ├── pages/admin/    # Dashboard (Orders, Reservations, Events...)
+│   ├── api/            # Modules API frontend (auth, menu, orders...)
+│   ├── hooks/          # Custom hooks (useBooking, useCart, useAuth...)
+│   ├── data/           # Données statiques (menu, boissons, horaires...)
+│   └── styles/         # CSS global (index.css)
+├── backend/
+│   └── app/
+│       ├── api/        # Routes API (12 routeurs)
+│       ├── models/     # Modèles SQLAlchemy (User, Order, Reservation...)
+│       ├── services/   # Services métier (receipts, whatsapp, reference...)
+│       ├── core/       # Configuration, sécurité, base de données
+│       └── seed.py     # Script d'initialisation (tables + admin + menu)
+├── public/images/      # Images optimisées (plats, intérieurs, extérieurs)
+└── docker-compose.yml  # Infra Docker (PostgreSQL + API + Nginx)
+```
 
 ---
 
-## 👥 ÉQUIPE & RÔLES
+## 5. Fonctionnalités
 
-- **Chef de projet :** [À définir]
-- **Designer UI/UX :** [À définir]
-- **Développeur Frontend (React/TS) :** [À définir]
-- **Développeur Backend (Python) :** [À définir]
-- **SEO Specialist :** [À définir]
+### 5.1 Site Public
+
+| # | Fonctionnalité | Statut |
+|---|---|---|
+| 1 | Carrousel hero avec slideshow (photos réelles) | ✓ |
+| 2 | Navigation fixe responsive avec underline hover | ✓ |
+| 3 | Section « Notre Histoire » avec images | ✓ |
+| 4 | Menu interactif (7 catégories, filtres, cartes) | ✓ |
+| 5 | Carte complète (flipbook interactif) | ✓ |
+| 6 | Réservation de table | ✓ |
+| 7 | Réservation d'événements (6 types) | ✓ |
+| 8 | Commandes en ligne (3 modes) | ✓ |
+| 9 | Galerie photos avec lightbox | ✓ |
+| 10 | Assistant IA (chatbot) | ✓ |
+| 11 | Horaires & Google Maps intégré | ✓ |
+| 12 | Reçus avec QR codes | ✓ |
+| 13 | Feedback client (1-5 étoiles) | ✓ |
+| 14 | Responsive (mobile, tablette, desktop) | ✓ |
+| 15 | SEO complet (Schema.org, Open Graph, sitemap) | ✓ |
+
+### 5.2 Dashboard Admin
+
+| # | Fonctionnalité | Statut |
+|---|---|---|
+| 1 | Authentification JWT sécurisée | ✓ |
+| 2 | Vue d'ensemble (KPIs temps réel) | ✓ |
+| 3 | Gestion des commandes (CRUD + statuts) | ✓ |
+| 4 | Gestion des réservations (CRUD + statuts) | ✓ |
+| 5 | Gestion des événements (devis, acompte) | ✓ |
+| 6 | Gestion du menu (CRUD) | ✓ |
+| 7 | Gestion de la galerie (CRUD) | ✓ |
+| 8 | Réponse aux clients (WhatsApp) | ✓ |
+| 9 | Reçus WhatsApp manuels | ✓ |
+| 10 | Retours clients | ✓ |
+| 11 | Utilisateurs avec rôles (3 niveaux) | ✓ |
+
+### 5.3 Communication & Sécurité
+
+| # | Fonctionnalité | Statut |
+|---|---|---|
+| 1 | WhatsApp Cloud API au staff | ✓ |
+| 2 | Reçus automatiques à chaque étape | ✓ |
+| 3 | QR codes sur chaque reçu | ✓ |
+| 4 | Protection brute-force (5 tentatives) | ✓ |
+| 5 | HTTPS Let's Encrypt gratuit | ✓ |
+| 6 | Backups PostgreSQL quotidiens | ✓ |
+| 7 | Docker Compose | ✓ |
 
 ---
 
-## 💰 BUDGET ESTIMÉ
+## 6. Menu Complet (78+ plats)
 
-### Développement
-- Frontend React + TS + Tailwind : [Selon prestataire]
-- Backend Python FastAPI : [Selon prestataire]
-- Design UI/UX : [Selon prestataire]
+Le site intègre le menu complet de La Marquise Restaurant avec les catégories suivantes :
 
-### Infrastructure mensuelle
-- Hébergement Frontend (Vercel) : 0-20€/mois
-- Hébergement Backend (Render) : 0-25€/mois
-- Base de données PostgreSQL : 0-15€/mois
-- Domaine : ~15€/an
-- CDN (Cloudflare) : 0-20€/mois
+- **Starters & Entrées** — 17 plats (French Fries, Nuggets, Tenders, Chicken Wings, Shawarma, Foie Gras, Nachos, Edamame, Bruschetta...)
+- **Salades** — 9 variétés (Green, Caesar, Tuna Pasta, Roasted Beef, La Marquise, Carpaccio, Poké...)
+- **Burgers & Sandwiches** — 14 variétés (Beef, Chicken, Zinger, Fish, Veggie, Fajitas, Marquise Chicken/Steak...)
+- **Plats Principaux** — 6 plats (Pizza Marquise, Margherita, Pepperoni, Saumon Maki, Filet Mignon, Filet de Bar...)
+- **Fried Chicken & Kids** — 8 formules (Wings Meal, Chicken Meal, Crispy Meal, Beef Kids, Chicken Kids...)
+- **Desserts & Waffles** — 6 desserts (Savarin, Bubble Waffle Oreo/Lotus/Strawberry, Sundae, Moelleux Chocolat)
+- **Boissons** — 30+ boissons (Milkshakes, Fresh Juices, Sodas, Coffee & Tea, Cocktails, Bières)
 
----
-
-## 📞 CONTACT
-
-**Téléphone :** +237 6 71 49 07 33  
-**Instagram :** [@theyard_dla](https://www.instagram.com/theyard_dla/)  
-**Adresse :** 737 Rue Batibois, Bonapriso, Douala, Cameroun  
+Prix affichés en **CFA**. Tranche : 1 000 à 23 000 CFA par personne.
 
 ---
 
-## 📝 NOTES & RÉFÉRENCES
+## 7. Maquettes & Documentation
 
-### Maquettes et documentation
-- **Wireframes texte :** maketetes/mockup-home.txt, mockup-gallery.txt, mockup-menu.txt
-- **Maquettes visuelles site :** maketetes/mockup-homepartie1.png, mockup-homepartie2.png
-- **Maquette dashboard :** maketetes/mockup-dashboard.png, Dashboard.png
-- **Logo :** maketetes/logo-removebg-preview.png
-
-### Assets média
-- **Logo :** public/images/logo_theyard.png
-- **Photos hero :** public/images/the yard *.webp
-- **Photos menu :** public/medias/menu_photos/
-- **Vidéos :** public/videos/hero-bg.mp4, spotlight.mp4
+| Document | Contenu |
+|---|---|
+| Proposition commerciale | Fonctionnalités détaillées, technologies, avantages |
+| Contrat de prestation | Contrat clé en main + comparaison des offres |
+| Cahier des charges | Ce document |
+| Guide de déploiement | Instructions techniques pour la mise en production |
+| Présentation responsive | Mockup desktop, laptop, tablette et mobile |
 
 ---
 
-*Document mis à jour le 31 juillet 2026*  
-*Version 2.0 — Migration vers React + TypeScript + Tailwind CSS*
+## 8. Déploiement
+
+### Frontend
+
+- **Hébergement :** Vercel
+- **Build :** Auto depuis GitHub (`npm run build`)
+- **Domaine :** `lamarquise-douala.vercel.app`
+
+### Backend
+
+- **Hébergement :** VPS LWS (Docker)
+- **Stack :** PostgreSQL 16 + FastAPI + Nginx
+- **SSL :** HTTPS Let's Encrypt gratuit
+- **Backups :** Quotidiens, 30 jours de rétention
+
+### Base de données
+
+- **Production :** PostgreSQL 16
+- **Développement :** SQLite
+- **Migrations :** Automatiques au démarrage
+
+---
+
+## 9. Planning
+
+| Phase | Description | Durée |
+|---|---|---|
+| 1 | Setup & MVP Site Public | 1 semaine |
+| 2 | Site Public Complet (menu, galerie, réservation) | 1 semaine |
+| 3 | Dashboard Admin | 1 semaine |
+| 4 | Backend FastAPI (12 routes) | 1 semaine |
+| 5 | Sécurité, SEO, Accessibilité | 3 jours |
+| 6 | Tests concurrence 100+ | 2 jours |
+| 7 | Production Docker + PostgreSQL + HTTPS | 2 jours |
+| 8 | Déploiement Vercel + VPS LWS | 2 jours |
+| **Total** | | **4-6 semaines** |
+
+---
+
+## 10. Infrastructure Mensuelle
+
+| Poste | Coût estimé |
+|---|---|
+| Frontend Vercel | 0-20€/mois |
+| Backend VPS LWS | ~6€/mois |
+| PostgreSQL | Incluse dans VPS |
+| Domaine | ~15€/an |
+| CDN Cloudflare | 0-20€/mois |
+
+---
+
+*Document mis à jour le 8 août 2026 — Version 2.0*

@@ -89,7 +89,7 @@ export default function About() {
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-              {FEATURES.map((f, i) => (
+              {FEATURES.map((f) => (
                 <div key={f.title} className="group flex gap-4 rounded-md border border-transparent p-3 transition-colors duration-300 hover:border-accent/25 hover:bg-white/60">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-accent/30 text-xl transition-all duration-300 group-hover:bg-accent/10">
                     {f.icon}

@@ -34,9 +34,9 @@ export const drinkSections: DrinkSection[] = [
     id: 'smoothies',
     title: 'Special Smoothies',
     items: [
-      { name: 'Smoothie Tropical', detail: 'Mangue, Ananas, Banane, Jus de fruits' },
-      { name: 'Smoothie Berry', detail: 'Framboise, Myrtille, Banane, Yaourt' },
-      { name: 'Smoothie Green', detail: 'Épinard, Pomme, Banane, Gingembre' },
+      { name: 'Smoothie Tropical', detail: 'Mangue, Ananas, Banane, Jus de fruits', price: 3500 },
+      { name: 'Smoothie Berry', detail: 'Framboise, Myrtille, Banane, Yaourt', price: 3500 },
+      { name: 'Smoothie Green', detail: 'Épinard, Pomme, Banane, Gingembre', price: 3500 },
     ],
   },
   {
