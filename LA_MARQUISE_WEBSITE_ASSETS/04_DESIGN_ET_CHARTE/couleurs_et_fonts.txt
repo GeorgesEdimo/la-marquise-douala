@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════════════
+LA MARQUISE RESTAURANT — CHARTE GRAPHIQUE
+═══════════════════════════════════════════════════════════
+
+PALETTE DE COULEURS (Bordeaux + Or + Crème)
+
+  PRIMARY (Bordeaux foncé)
+    DEFAULT  : #5c1a2b
+    Light    : #7a2539
+    Dark     : #3a0e1a
+
+  ACCENT (Or)
+    DEFAULT  : #c9a24b
+    Light    : #dcbd77
+    Dark     : #a8823a
+
+  GOLD (Or principal)   : #d4a843
+
+  CREAM (Fonds clairs)
+    DEFAULT  : #faf6ef
+    Dark     : #f3ede1
+
+  INK (Texte foncé)     : #1c1c1c
+  MUTED (Texte second.) : #7a7166
+
+FONTS
+
+  Titres     : Cormorant Garamond (serif élégant)
+  Corps      : Inter (sans-serif lisible)
+  Accents    : Outfit (sans-serif moderne)
+
+AMBIANCE VISUELLE
+
+  - Bordeaux profond = noblesse, raffinement, "marquise"
+  - Or = luxe, prestige, accent doré
+  - Crème = chaleur, élégance sobre
+  - Style : élégant et chaleureux, évoquant la fine dining
+
+  → La charte graphique est celle du site React/Vite/Tailwind
+    dans src/data/ et tailwind.config.js (couleurs primary/accent).
+
+NOTE : Si le logo officiel du restaurant révèle d'autres couleurs
+        (par ex. noir + or, ou bleu marine + or), ajuster la
+        palette ci-dessus en conséquence. La palette actuelle
+        (bordeaux + or) est une proposition cohérente avec
+        l'univers "La Marquise" (noble, raffiné, fine dining).

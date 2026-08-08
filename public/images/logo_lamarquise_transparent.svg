@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dcbd77"/>
+      <stop offset="50%" style="stop-color:#c9a24b"/>
+      <stop offset="100%" style="stop-color:#a8823a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="160" fill="transparent"/>
+  <circle cx="200" cy="58" r="34" fill="none" stroke="url(#goldGrad)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="200" y="76" text-anchor="middle" font-family="Georgia, serif" font-size="42" font-weight="bold" fill="url(#goldGrad)">LM</text>
+  <text x="200" y="120" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="url(#goldGrad)" letter-spacing="6">LA MARQUISE</text>
+  <text x="200" y="145" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#c9a24b" letter-spacing="6" opacity="0.8">RESTAURANT</text>
+</svg>

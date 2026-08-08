@@ -1,0 +1,72 @@
+# La Marquise — Production Docker Compose
+# Lancement : docker compose up -d
+# Arrêt     : docker compose down
+
+services:
+  # ── PostgreSQL ──
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: la_marquise
+      POSTGRES_USER: lamarquise
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-lamarquise2024}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lamarquise -d la_marquise"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── Backend FastAPI ──
+  api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://lamarquise:${DB_PASSWORD:-lamarquise2024}@db:5432/la_marquise
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - backend
+    expose:
+      - "8000"
+
+  # ── Nginx (reverse proxy + HTTPS) ──
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./public:/usr/share/nginx/html:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+      - ./certbot/www:/var/www/certbot:ro
+    depends_on:
+      - api
+    networks:
+      - backend
+
+  # ── Certbot (HTTPS Let's Encrypt) ──
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do sleep 12h & wait $${!}; certbot renew; done'"
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:

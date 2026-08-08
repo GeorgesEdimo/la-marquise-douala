@@ -1,0 +1,7 @@
+# La Marquise Restaurant — robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /receipt/
+
+Sitemap: https://lamarquise-douala.cm/sitemap.xml

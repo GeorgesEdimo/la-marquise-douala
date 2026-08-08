@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a0e1a"/>
+      <stop offset="50%" style="stop-color:#5c1a2b"/>
+      <stop offset="100%" style="stop-color:#2b0a14"/>
+    </linearGradient>
+    <linearGradient id="gd2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dcbd77"/>
+      <stop offset="50%" style="stop-color:#c9a24b"/>
+      <stop offset="100%" style="stop-color:#a8823a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg2)"/>
+  <rect x="120" y="120" width="1680" height="840" fill="none" stroke="#c9a24b" stroke-opacity="0.18" stroke-width="1"/>
+  <rect x="150" y="150" width="1620" height="780" fill="none" stroke="#c9a24b" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="960" cy="480" r="190" fill="none" stroke="#dcbd77" stroke-opacity="0.25" stroke-width="1.5"/>
+  <text x="960" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="96" font-weight="bold" fill="url(#gd2)" opacity="0.6">LM</text>
+  <text x="960" y="640" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#faf6ef" opacity="0.7" letter-spacing="8">LA MARQUISE DOUALA</text>
+  <text x="960" y="690" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c9a24b" opacity="0.6" letter-spacing="5">EAT • ENJOY • WIN</text>
+</svg>

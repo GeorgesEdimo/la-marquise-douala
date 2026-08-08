@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" style="stop-color:#7a2539"/>
+      <stop offset="55%" style="stop-color:#5c1a2b"/>
+      <stop offset="100%" style="stop-color:#2b0a14"/>
+    </radialGradient>
+    <linearGradient id="gd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dcbd77"/>
+      <stop offset="50%" style="stop-color:#c9a24b"/>
+      <stop offset="100%" style="stop-color:#a8823a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="960" cy="540" r="340" fill="none" stroke="#c9a24b" stroke-opacity="0.15" stroke-width="1.5"/>
+  <circle cx="960" cy="540" r="310" fill="none" stroke="#c9a24b" stroke-opacity="0.08" stroke-width="1" stroke-dasharray="3 10"/>
+  <circle cx="960" cy="540" r="240" fill="none" stroke="#dcbd77" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="960" y="585" text-anchor="middle" font-family="Georgia, serif" font-size="130" font-weight="bold" fill="url(#gd)" opacity="0.5">LM</text>
+  <text x="960" y="700" text-anchor="middle" font-family="Georgia, serif" font-size="46" font-weight="bold" fill="#faf6ef" opacity="0.85" letter-spacing="14">LA MARQUISE</text>
+  <text x="960" y="760" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#c9a24b" letter-spacing="10" opacity="0.8">RESTAURANT</text>
+  <line x1="760" y1="820" x2="1160" y2="820" stroke="#c9a24b" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="960" y="870" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#faf6ef" opacity="0.4" letter-spacing="6">EAT • ENJOY • WIN</text>
+</svg>

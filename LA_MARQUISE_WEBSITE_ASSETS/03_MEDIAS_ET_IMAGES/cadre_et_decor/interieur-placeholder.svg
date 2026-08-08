@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a0e1a"/>
+      <stop offset="60%" style="stop-color:#5c1a2b"/>
+      <stop offset="100%" style="stop-color:#2b0a14"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="60" y="60" width="680" height="480" rx="4" fill="none" stroke="#c9a24b" stroke-opacity="0.35" stroke-width="1.5"/>
+  <rect x="80" y="80" width="640" height="440" rx="2" fill="none" stroke="#c9a24b" stroke-opacity="0.12" stroke-width="1"/>
+  <circle cx="400" cy="250" r="70" fill="none" stroke="#dcbd77" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="400" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" fill="#c9a24b" opacity="0.7">LM</text>
+  <text x="400" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#faf6ef" opacity="0.8">L'Intérieur</text>
+  <text x="400" y="395" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#c9a24b" opacity="0.6" letter-spacing="4">FINE DINING</text>
+  <line x1="280" y1="440" x2="520" y2="440" stroke="#c9a24b" stroke-opacity="0.4" stroke-width="1"/>
+</svg>

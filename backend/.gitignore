@@ -1,0 +1,21 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ── Environnement ──
+.env
+
+# ── Base de données locale ──
+*.db
+*.sqlite3
+
+# ── Uploads ──
+uploads/
+
+# ── Tests / outils ──
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/

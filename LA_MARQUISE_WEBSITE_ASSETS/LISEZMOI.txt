@@ -1,0 +1,49 @@
+═══════════════════════════════════════════════════════════
+LA MARQUISE WEBSITE ASSETS — GUIDE
+═══════════════════════════════════════════════════════════
+
+Ce dossier regroupe toutes les informations de LA MARQUISE
+RESTAURANT pour la conception et l'alimentation du site web.
+
+STRUCTURE
+──────────
+01_INFOS_ET_TEXTES/
+    presentation.txt         → Concept, slogan, avis, points forts
+    contact_et_horaires.txt  → Adresse, téléphones, horaires, prix
+    reseaux_sociaux.txt      → Instagram, Facebook, TripAdvisor, Google
+
+02_MENU_ET_CARTE/
+    carte_complete.txt       → Tous les plats, boissons et tarifs
+    photos_plats/            → ⬅ Y déposer les photos des plats
+    scannage_menu/           → ⬅ Y déposer les scans du menu physique
+
+03_MEDIAS_ET_IMAGES/
+    cadre_et_decor/          → ⬅ Photos salle, bar, espace de jeux
+    bannieres_hero/          → ⬅ Visuels haute résolution (hero du site)
+    videos/                  → ⬅ Extraits vidéo de l'ambiance
+
+04_DESIGN_ET_CHARTE/
+    couleurs_et_fonts.txt    → Palette bordeaux/or + polices
+    logo/                    → Logo La Marquise (SVG)
+
+COMMENT NOURRIR LE SITE AVEC CES IMAGES
+────────────────────────────────────────
+Les images des dossiers 02/03 doivent être copiées dans
+le site web :  LaMarquise/public/images/
+
+  - Photos des plats  → remplace les fichiers plat-placeholder.svg
+  - Bannières hero    → remplace hero-placeholder-1..4.svg
+  - Salle / bar       → remplace interieur-placeholder.svg,
+                        bar-placeholder.svg, ambiance-placeholder.svg
+  - Espace de jeux    → remplace jeux-placeholder.svg
+
+PUIS mettre à jour les fichiers du site :
+  - src/data/menuItems.ts      (images des plats)
+  - src/data/galleryItems.ts   (galerie)
+  - src/components/Hero.tsx    (slides du hero)
+
+SOURCE DES VISUELS HD
+─────────────────────
+  Instagram : @lamarquisedouala
+  Facebook  : La Marquise Restaurant
+  TripAdvisor / Google Maps : photos clients
